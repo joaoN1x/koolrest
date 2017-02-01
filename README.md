@@ -24,7 +24,7 @@ All you need to do to have an end-point working is to create a PHP file in doers
 		 RewriteRule .* index.php?url=$0 [QSA,L]
 ```
 
-	 e.g. Nginx
+e.g. Nginx
 	 
 ```
 	     location / {
@@ -57,7 +57,7 @@ All you need to do to have an end-point working is to create a PHP file in doers
 
 ```
 
-    _post added to the funciton will handle POST sent, or _get, or _delete... and so on... but if nothing is added, no _<something>, that funciton ill handle any inside it.
+ _post added to the funciton will handle POST sent, or _get, or _delete... and so on... but if nothing is added, no _<something>, that funciton ill handle any inside it.
     
  3. To use a REST GET call just execute
     <b>http://localhost/stuff/todo</b> 
