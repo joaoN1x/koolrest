@@ -16,23 +16,19 @@
 ##Getting Started
 All you need to do to have an end-point working is to create a PHP file in doers/ folder, and call it on the url with the same path of the namespace.
 
- 1. Configure your virtualhost to point all calls to index.php file
-	 e.g. Apache
-```
-		 RewriteEngine on
-		 RewriteCond %{REQUEST_FILENAME} !index.php
-		 RewriteRule .* index.php?url=$0 [QSA,L]
-```
-
+1. Configure your virtualhost to point all calls to index.php file
+e.g. Apache
+```     
+        RewriteEngine on
+		RewriteCond %{REQUEST_FILENAME} !index.php
+		RewriteRule .* index.php?url=$0 [QSA,L]```
 e.g. Nginx
-	 
-```
-	     location / {
+```	     
+        location / {
                  try_files $uri $uri/ /index.php?$args;
-         }
-```
- 2. Create your file for the class you want to handle below folder doers/, 
-    e.g. <b>doers/stuff.php</b>, and add the code below in to it
+         }```
+2. Create your file for the class you want to handle below folder doers/, 
+    e.g. <b>doers/stuff.php</b>, and add the code below in to it    
 ``` php
     <?php
     namespace doers;
@@ -54,12 +50,8 @@ e.g. Nginx
             $this->return['message'] = "I just DELETE it.";
             return $this->return;
         }
-
-```
-
  <code>_post</code> added to the function will handle POST sent, or <code>_get</code>, or <code>_delete</code>... and so on... but if nothing is added, no _<something>, that function will handle any inside it.
-    
- 3. To use a REST GET call just execute
+3. To use a REST GET call just execute
     <b>http://localhost/stuff/todo</b> 
     will return <code>"I just GET it."</code>
     If you send a REST PUT call to the same end point you will get <code>"I just PUT it."</code>
