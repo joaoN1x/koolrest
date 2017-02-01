@@ -57,7 +57,7 @@ e.g. Nginx
 
 ```
 
- _post added to the funciton will handle POST sent, or _get, or _delete... and so on... but if nothing is added, no _<something>, that funciton ill handle any inside it.
+ <code>_post</code> added to the function will handle POST sent, or <code>_get</code>, or <code>_delete</code>... and so on... but if nothing is added, no _<something>, that function will handle any inside it.
     
  3. To use a REST GET call just execute
     <b>http://localhost/stuff/todo</b> 
